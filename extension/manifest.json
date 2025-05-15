@@ -3,7 +3,7 @@
   "name": "FXTwitter Link Replacer",
   "version": "1.0",
   "description": "Avtomatychno kopiyuye poslannya na tvity z fxtwitter.com",
-  "permissions": [ "clipboardWrite", "scripting" ],
+  "permissions": [ "clipboardWrite", "scripting", "storage" ],
   "host_permissions": [
     "*://twitter.com/*",
     "*://x.com/*"
@@ -17,5 +17,8 @@
       "js": [ "content.js" ],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
