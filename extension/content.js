@@ -39,7 +39,7 @@ const observer = new MutationObserver(() => {
       item.dataset.fxHandled = "true";
       item.addEventListener("click", () => {
         console.log("🔗 Кнопка копіювання натиснута, чекаємо буфер...");
-        setTimeout(overrideClipboard, 300);
+        overrideClipboard();
       });
     }
   });
