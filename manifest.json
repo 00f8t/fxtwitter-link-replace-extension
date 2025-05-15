@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "FXTwitter Link Replacer",
+  "version": "1.0",
+  "description": "Avtomatychno kopiyuye poslannya na tvity z fxtwitter.com",
+  "permissions": [ "clipboardWrite", "scripting" ],
+  "host_permissions": [
+    "*://twitter.com/*",
+    "*://x.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://twitter.com/*",
+        "*://x.com/*"
+      ],
+      "js": [ "content.js" ],
+      "run_at": "document_idle"
+    }
+  ]
+}
